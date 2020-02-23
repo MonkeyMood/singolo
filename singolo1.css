@@ -6,6 +6,14 @@
     font-family: "Lato-Light";
     src: url(/assets/fonts/Lato-Light.ttf);
 }
+@font-face {
+    font-family: "Lato-Bold";
+    src: url(/assets/fonts/Lato-Bold.ttf);
+}
+@font-face {
+    font-family: "Lato-Black";
+    src: url(/assets/fonts/Lato-Black.ttf);
+}
 
 /* HEADER */
 
@@ -43,9 +51,9 @@
     display: flex;
     justify-content: space-between;
     width: 371px;
-    color: #494E62;
     position: relative;
     top: 24px;
+    list-style-type: none;
 }
 .nav a {
     color: #ffffff;
@@ -57,6 +65,12 @@
 }
 .nav a:hover {
     color: #F06C64;
+}
+
+li+li::before {
+    content: "·";
+    color: #494e62;
+    padding: 13px;
 }
 
 /* SLIDER */
@@ -94,6 +108,80 @@ main {
     left: 92px;
     bottom: 1px;
 }
-.main a:hover {
-    color: #F06C64;
+
+/* SERVICES */
+ 
+.services {
+    height: 494px;
+    background-color: #f2f2f2;
+    border-bottom: 6px solid #ffffff;
+    color: #666d89;
+    display: flex;
+    justify-content: center;
+}
+
+.services__name {
+	margin: 59px 0 18px;
+    font-family: "Lato-Black";
+	font-size: 30px;
+	letter-spacing: 0.1px;
+}
+
+.services__characteristic {
+	max-width: 940px;
+	font-family: "Lato-Light";
+	font-size: 18px;
+    line-height: 1.7;
+    letter-spacing: 0.19px;
+    word-spacing: -2.7px;
+	text-align: justify;
+	margin-bottom: 44px;
+}
+
+.services__pluses {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.services__item {
+	position: relative;
+	width: 220px;
+	padding: 0 20px 29px 80px;
+}
+
+.services__item-last {
+	position: relative;
+	width: 220px;
+	padding-left: 80px;
+}
+
+.services__icon {
+	position: absolute;
+    bottom: 80px;
+    left: 0px;
+}
+
+.services__title {
+	font-family: "Lato-Black";
+    font-size: 18px;
+    letter-spacing: -0.1px;
+    word-spacing: 0.5px;
+}
+
+.services__subtitle {
+	font-size: 12px;
+    line-height: 22px;
+	text-align: justify;
+}
+.container {
+	max-width: 940px;
+	padding: 0 40px;
+    margin: 0 auto;
+}
+
+body {
+    background-color: #2D303A;
+}
+.bue {
+    margin-bottom: 17px;
 }
